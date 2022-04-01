@@ -147,7 +147,7 @@ input[type="checkbox"]{
 }
 .label{
     cursor: pointer;
-    outline: 1px solid var(--VeryLightGrayishBlue);
+    border: 1px solid var(--VeryLightGrayishBlue);
 }
 .label:hover, .dark .label:hover{
     border: 1px solid var(--BrightBlue);
