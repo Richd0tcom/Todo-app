@@ -1,0 +1,256 @@
+/* *{
+    outline: 1px solid red;
+
+}*/
+:root{
+    /*primary*/
+    --BrightBlue: hsl(220, 98%, 61%);
+    --gradient:linear-gradient(135deg, hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+
+
+    /*light theme*/
+    --VeryLightGray: hsl(0, 0%, 98%);
+    --VeryLightGrayishBlue: hsl(236, 33%, 92%);
+    --LightGrayishBlue2: hsl(233, 11%, 84%);
+    --DarkGrayishBlue2: hsl(236, 9%, 61%);
+    --VeryDarkGrayishBlue3: hsl(235, 19%, 35%);
+
+    /*dark theme*/
+    --VeryDarkBlue: hsl(235, 21%, 11%);
+    --VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+    --LightGrayishBlue: hsl(234, 39%, 85%);
+    --LightGrayishBluehover: hsl(236, 33%, 92%);
+    --DarkGrayishBlue: hsl(234, 11%, 52%);
+    --VeryDarkGrayishBlue: hsl(233, 14%, 35%);
+    --VeryDarkGrayishBlue2: hsl(237, 14%, 26%);
+}
+
+.wrapper{
+    background: url(../../images/bg-mobile-light.jpg);
+    background-repeat: no-repeat;
+}
+.dark .wrapper{
+    background:url(../../images/bg-mobile-dark.jpg);
+    background-repeat: no-repeat;
+    background-color: var(--VeryDarkBlue);
+    color: var(--LightGrayishBlue);  
+}
+
+.sun{
+    display: none;
+    transition: all 0.5s ease-out;
+}
+body{
+    
+    height: 100vh;/*change*/
+    background-color: var(--VeryLightGray);
+    transition: all 0.5s ease-out;
+    
+}
+.dark{
+    
+    height: 100vh;/*change*/
+    transition: all 0.5s ease-out;
+    background-color: var(--VeryDarkBlue);
+    
+    
+}
+
+.dark .moon{
+    transition: all 0.5s ease-out;
+    display:none;
+    opacity: 0;
+    
+}
+.dark .sun {
+    transition: all 0.5s ease-out;
+    display:block;
+    opacity: 1;
+    
+}
+
+h1{
+    letter-spacing: 0.28em;
+    color: var(--VeryLightGray);
+}
+
+
+.items{
+    display:grid;
+    grid-template-columns: 10% auto 10%;
+    border-bottom: 1px solid var(--VeryLightGrayishBlue);
+    color: var(--VeryDarkGrayishBlue3);
+}
+.items .strike{
+    text-decoration: line-through;
+    color: var(--VeryLightGrayishBlue);
+}
+.items:hover{
+    cursor:grab;
+}
+#cross{
+    cursor: pointer;
+}
+
+.dark #container, .dark #activity {
+    background-color: var(--VeryDarkDesaturatedBlue);
+    box-shadow: 0 0 0 0 5px var(--VeryDarkDesaturatedBlue);
+  
+}
+#container,#activity, .dex{
+    background-color: white;
+}
+.circle{
+    display:grid;
+    grid-template-columns: 10% auto;
+    background-color: white;
+}
+.dark .circle{
+    background-color: var(--VeryDarkDesaturatedBlue);
+}
+
+.dark .circle div div {
+    outline: 1px solid var(--VeryDarkGrayishBlue);
+}
+.circle div div {
+    outline: 1px solid var(--VeryLightGrayishBlue);
+}
+
+.dark .dex{
+    background-color: var(--VeryDarkDesaturatedBlue);
+}
+
+input[type="text"]{
+    outline: none;
+    -moz-appearance: textfield;
+    font-size: 18px;
+    font-weight: 500;
+    caret-color: var(--BrightBlue);
+    color: var(--DarkGrayishBlue)
+}
+.dark input[type="text"]{
+    background: var(--VeryDarkDesaturatedBlue);
+    color: var(--LightGrayishBlue);
+
+}
+input[type="text"]::placeholder{
+    font-size:0.8em;
+    font-weight: 400;
+    color: var(--DarkGrayishBlue);
+
+}
+input[type="checkbox"]{
+    display:none;
+}
+.label img{
+    display:none;
+}
+.label{
+    cursor: pointer;
+    outline: 1px solid var(--VeryLightGrayishBlue);
+}
+.label:hover, .dark .label:hover{
+    outline: 1px solid var(--BrightBlue);
+}
+.dark .label{
+    outline: 1px solid var(--VeryDarkGrayishBlue2) ;
+}
+.dark .items {
+    border-bottom: 0.8px solid var(--VeryDarkGrayishBlue2);
+    color: var(--LightGrayishBlue)
+}
+.dark .items .strike{
+    text-decoration: line-through;
+    color: var(--VeryDarkGrayishBlue);
+}
+.dark #drag{
+    color: var(--VeryDarkGrayishBlue);
+}
+#drag{
+    color: var(--LightGrayishBlue)
+}
+.dark #all, .dark #active, .dark #completed{
+    color: var(--DarkGrayishBlue)
+}
+
+#all,  #active, #completed{
+    color: var(--DarkGrayishBlue);
+}
+
+.dark #items-left, .dark #clr-completed{
+    color: var(--DarkGrayishBlue)
+}
+#items-left, #clr-completed{
+    color: var(--DarkGrayishBlue);
+}
+.dark #clr-completed:hover, .dark #all:hover, .dark #active:hover, .dark #completed:hover {
+    cursor: pointer;
+    color: var(--VeryLightGrayishBlue);
+}
+#clr-completed:hover, #all:hover,  #active:hover, #completed:hover {
+    cursor: pointer;
+    color: var(--VeryDarkDesaturatedBlue);
+    font-weight: 500;
+}
+#all:active,  #active:active, #completed:active{
+    color: var(--BrightBlue)
+}
+/*.dark input:checked ~ .label ~ p{
+
+    text-decoration: line-through;
+    color: var(--VeryDarkGrayishBlue2);
+}*/
+input:checked ~ .label{
+
+    background:linear-gradient(135deg, hsl(192, 100%, 67%) , hsl(280, 87%, 65%))
+}
+input:checked ~ .label img{
+    display:block;
+}
+@media screen and (min-width:400px) {
+
+    .wrapper{
+
+        background: url(../../images/bg-desktop-light.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: all 0.5s ease-out;
+        
+    }
+    .dark .wrapper{
+        background:url(../../images/bg-desktop-dark.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: var(--VeryDarkBlue);
+        color: var(--LightGrayishBlue);
+        transition: all 0.5s ease-out;
+    }
+    .dark{
+        background-color: var(--VeryDarkBlue);
+        color: var(--LightGrayishBlue);
+        transition: all 0.5s ease-out;
+        
+    }
+
+    input[type="text"]::placeholder{
+        font-size:1em;
+        font-weight: 400;
+        color: var(--DarkGrayishBlue);
+    
+    }
+
+    
+}
+
+@media screen and (min-width:1024px){
+
+    #cross{
+        cursor: pointer;
+        opacity: 0;
+    }
+
+    .items:hover #cross{
+        cursor: pointer;
+        opacity:1;
+    }
+}
