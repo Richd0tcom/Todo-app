@@ -110,10 +110,10 @@ h1{
 }
 
 .dark .circle div div {
-    outline: 1px solid var(--VeryDarkGrayishBlue);
+    border: 1px solid var(--VeryDarkGrayishBlue);
 }
 .circle div div {
-    outline: 1px solid var(--VeryLightGrayishBlue);
+    border: 1px solid var(--VeryLightGrayishBlue);
 }
 
 .dark .dex{
@@ -150,10 +150,10 @@ input[type="checkbox"]{
     outline: 1px solid var(--VeryLightGrayishBlue);
 }
 .label:hover, .dark .label:hover{
-    outline: 1px solid var(--BrightBlue);
+    border: 1px solid var(--BrightBlue);
 }
 .dark .label{
-    outline: 1px solid var(--VeryDarkGrayishBlue2) ;
+    border: 1px solid var(--VeryDarkGrayishBlue2) ;
 }
 .dark .items {
     border-bottom: 0.8px solid var(--VeryDarkGrayishBlue2);

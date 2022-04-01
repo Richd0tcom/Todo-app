@@ -101,12 +101,12 @@ function populateList(todos =[], list) {
         return `
             <li class="items py-3 px-3 md:px-0 w-full h-14 lg:h-20 " data-index=${i} draggable="true" draggable>
                 <label for="act${i}" class="grid justify-end items-center md:pr-2">
-                    <input type="checkbox" name="" data-index=${i} id="act${i}" ${todo.complete ? 'checked' : ''}>
+                    <input type="checkbox"  data-index=${i} id="act${i}" ${todo.complete ? 'checked' : ''}>
                     <div class="label w-5 h-5 rounded-full grid place-items-center md:w-7 md:h-7">
                         <img src="./images/icon-check.svg" alt="check" class="w-3 h-3">
                     </div>
                 </label>
-                <p class="${todo.complete ? 'strike' :''} px-5 text-[20px] py-0 lg:py-3">${todo.text}</p>
+                <p class="${todo.complete ? 'strike' :''} px-5 text-md lg:text-[20px] py-0 lg:py-3">${todo.text}</p>
                 <i class="grid place-items-center"><img src="./images/icon-cross.svg" alt="X" data-index=${i}></i>
             </li>`;
     }).join('');
